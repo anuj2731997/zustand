@@ -1,16 +1,50 @@
-# React + Vite
+# Zustand Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite demo project using Zustand for state management.
 
-Currently, two official plugins are available:
+## What you will find here
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Global counter state using Zustand.
+- Theme management with live preview and toggle.
+- Simple authentication flow with login/logout state.
+- Component-driven state updates via Zustand stores.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `Counter` component that reads and updates shared counter state.
+- `ThemePreview`, `ThemeToggleButton`, and `UserProfile` components show theme state.
+- `Navbar`, `LoginPage`, and `Dashboard` components demonstrate auth state transitions.
+- Zustand stores in `src/store` for `counter`, `theme`, and `login` management.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+cd zustand
+npm install
+```
+
+## Run locally
+
+```bash
+npm run dev
+```
+
+Then open the local URL provided by Vite in your browser.
+
+## Project structure
+
+- `src/App.jsx` — main demo page wiring all app sections.
+- `src/components/Counter.jsx` — counter UI using Zustand store.
+- `src/components/ThemePreview.jsx` — displays current theme state.
+- `src/components/UserProfile.jsx` — user profile details.
+- `src/components/ThemeToggleButton.jsx` — theme toggle button.
+- `src/components/Dashboard.jsx` — authenticated dashboard view.
+- `src/components/Navbar.jsx` — login/logout navbar.
+- `src/components/LoginPage.jsx` — login page.
+- `src/store/counterStore.js` — Zustand counter store.
+- `src/store/themeManager.js` — theme state manager store.
+- `src/store/loginStore.js` — login/auth state store.
+
+## Notes
+
+This project is built for learning Zustand state management patterns. Feel free to extend the stores and components to try more shared state scenarios.
